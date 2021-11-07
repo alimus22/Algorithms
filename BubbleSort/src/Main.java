@@ -36,19 +36,18 @@ public class Main {
         return a;
     }
 
-    public static boolean swap(int[] a, int i, int j) {
+    public static void swap(int[] a, int i, int j) {
         int temp = a[i];
         a[i] = a[j];
         a[j] = temp;
-        return true;
     }
 
     public static void printArray(int[] a) {
-        String str = "[";
+        StringBuilder str = new StringBuilder("[");
         for(int i: a) {
-            str += i + " ";
+            str.append(i).append(" ");
         }
-        str += "]";
+        str.append("]");
         System.out.println(str);
     }
 }
