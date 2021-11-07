@@ -1,3 +1,18 @@
+/**
+ * Ali Hanni
+ *
+ * Binary Search
+ *
+ * Binary Search is a search algorithm that finds the index of a given value inside a sorted
+ * array. In Binary Search, the target value (t) is compared to the middle value of the array.
+ * Since the array is sorted, if the target value is smaller than the middle value, we know
+ * that if the target value is in the array, it must be in its first half. Process is then
+ * repeated with the first half, and so on until the value is found, or the remaining half is
+ * empty.
+ *
+ * Binary Search runs in O(logn).
+ */
+
 public class Main {
 
     public static void main(String[] args) {
@@ -23,6 +38,11 @@ public class Main {
         System.out.println("Value -12 is at position " + binarySearch(numbers4, -12));
     }
 
+    /**
+     * @param a Array where value is to be found.
+     * @param t Target to find in array.
+     * @return Index of target in array or -1 if value is not in the array.
+     */
     public static int binarySearch (int[] a, int t) {
         int start = 0;
         int end = a.length - 1;
